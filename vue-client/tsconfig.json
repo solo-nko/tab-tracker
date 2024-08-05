@@ -1,5 +1,11 @@
 {
   "files": [],
+  "compilerOptions": {
+    "allowJs": true,
+    "declaration": true,
+    "noImplicitAny": false,
+    "baseUrl": "src/types"
+  },
   "references": [
     {
       "path": "./tsconfig.node.json"
