@@ -9,5 +9,7 @@ tutorial from freeCodeCamp.org, available on [YouTube here](https://www.youtube.
 
 * Vue 3
 * Vue Router 4
-* Next.js
+* Express.js
 * Javascript + Typescript
+  * Express backend written in JavaScript
+  * Vue frontend written in TypeScript
