@@ -14,12 +14,6 @@ app.use(morgan("combined"));
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get("/status", (req, res) => {
-	res.send({
-		message: "Welcome to the server!"
-	});
-});
-
 require("./routes")(app);
 
 // set up sequelize database and then start server

@@ -1,7 +1,18 @@
+const AuthController = require('./controllers/AuthController');
+const AuthControllerPolicy = require('./policies/AuthControllerPolicy');
+
 module.exports = (app) => {
-	app.post("/register", (req, res) => {
+	// When a POST request directed at "/register" arrives
+	app.post("/register",
+		// AuthControllerPolicy handles validation for the request body.
+		// the next() function inside AuthControllerPolicy tells Express.js to move on to the next item in this list (AuthController)
+		AuthControllerPolicy.register,
+		AuthController.register);
+
+	// when a GET request directed at "/status" arrives
+	app.get("/status", (req, res) => {
 		res.send({
-			message: `User ${req.body.email} was registered successfully.`
+			message: "Welcome to the server!"
 		});
 	});
 }
