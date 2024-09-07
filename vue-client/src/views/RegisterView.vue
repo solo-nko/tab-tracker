@@ -1,13 +1,13 @@
 <template>
 	<v-layout>
-		<v-app-bar class="bg-cyan">
+		<v-app-bar>
 			<v-app-bar-title>Register</v-app-bar-title>
 		</v-app-bar>
 		<v-main class="pl-4 pr-4 pb-2">
 			<v-text-field label="Email" v-model="email" />
 			<v-text-field label="Password" v-model="password" type="password" />
 			<div class="error" v-html="errorBody"></div>
-			<v-btn class="bg-cyan" v-on:click="registerInfo">Register</v-btn>
+			<v-btn v-on:click="registerInfo">Register</v-btn>
 		</v-main>
 	</v-layout>
 </template>
