@@ -1,16 +1,22 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from "vue-router";
-</script>
-
 <template>
-	<nav>
-		<RouterLink to="/">Home</RouterLink>
-		<RouterLink to="/about">About</RouterLink>
-		<RouterLink to="/register">Register</RouterLink>
-	</nav>
+	<v-app>
+		<PageHeader></PageHeader>
+		<v-main>
+			<v-container fluid>
+				<RouterView />
+			</v-container>
+		</v-main>
 
-	<RouterView />
+	</v-app>
+
 </template>
+
+<script setup lang="ts">
+import { RouterView } from "vue-router";
+// see below link for info on linking vue components
+// https://stackoverflow.com/a/76286386
+import PageHeader from "@/components/Header.vue";
+</script>
 
 <style scoped>
 

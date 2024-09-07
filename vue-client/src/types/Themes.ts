@@ -19,7 +19,7 @@ const defaultLightTheme: ThemeDefinition = {
 const defaultDarkTheme: ThemeDefinition = {
 	dark: true,
 	colors: {
-		surface: '#F44336'
+		primary: '#F44336'
 	}
 }
 
